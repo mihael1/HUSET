@@ -2,3 +2,31 @@
 border: 1px solid #000;
     padding: 2em;
 }
+#other {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px)  {
+  #other {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1000px)  {
+  #other {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+.textBG {
+    background-color: darkgrey;
+    padding: 2em;
+}
+
+h1, h3, h4, p{
+    color: white;
+}
+

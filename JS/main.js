@@ -26,10 +26,19 @@
 
         clone.querySelector("h1").textContent = anEvent.title.rendered;
         clone.querySelector(".price").textContent = anEvent.acf.price;
-        clone.querySelector(".date").textContent = anEvent.date;
-        clone.querySelector(".description").innerHTML = anEvent.acf.description;
+        clone.querySelector(".date").textContent = anEvent.acf.date;
+        clone.querySelector(".time").textContent = anEvent.acf.time;
+        //clone.querySelector(".description").innerHTML = anEvent.acf.description;
+        clone.querySelector(".genre").textContent = anEvent.acf.genre;
 
         //clone.querySelector("img").setAttribute("src", "anEvent.acf.image.sizes.medium")
+        //clone.querySelector("img").setAttribute("src", [0].acf.image.sizes.medium.source_url)
+
+        //        if (anEvent.[0].acf.image) { //img is there
+        //          clone.querySelector("img").setAttribute("src", aCar._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+        //    } else { // no img
+        //      clone.querySelector("img").remove()
+
 
         other.appendChild(clone);
     }
