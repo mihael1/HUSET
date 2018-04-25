@@ -1,6 +1,6 @@
 .otherStuff{
-border: 1px solid #000;
-    padding: 2em;
+margin: 1em;
+
 }
 #other {
   display: grid;
@@ -30,3 +30,11 @@ h1, h3, h4, p{
     color: white;
 }
 
+.datetime{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+a{
+margin: auto;}

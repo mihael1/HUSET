@@ -25,7 +25,7 @@
         let clone = template.cloneNode(true);
 
         clone.querySelector("h1").textContent = anEvent.title.rendered;
-        clone.querySelector(".price").textContent = anEvent.acf.price;
+        clone.querySelector(".price span").textContent = anEvent.acf.price;
         clone.querySelector(".date").textContent = anEvent.acf.date;
         clone.querySelector(".time").textContent = anEvent.acf.time;
         //clone.querySelector(".description").innerHTML = anEvent.acf.description;
