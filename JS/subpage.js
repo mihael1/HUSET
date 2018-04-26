@@ -10,4 +10,5 @@ function showDetails(aDetails){
     console.log(aDetails);
     document.querySelector("h2").textContent=aDetails.title.rendered;
     document.querySelector("img").src=aDetails.acf.image.sizes.large;
+    document.querySelector("p.desc").textContent=aDetails.acf.description;
 }
