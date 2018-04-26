@@ -2,6 +2,9 @@
 margin: 1em;
 
 }
+img{
+    width: 100%;
+}
 #other {
   display: grid;
   grid-template-columns: 1fr;

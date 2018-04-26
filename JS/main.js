@@ -7,6 +7,7 @@
     function fetchOther() {
         lookingForData = true;
 
+
         fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2&page=" + page)
             .then(e => e.json())
             .then(showOther)
@@ -30,16 +31,12 @@
         clone.querySelector(".time").textContent = anEvent.acf.time;
         //clone.querySelector(".description").innerHTML = anEvent.acf.description;
         clone.querySelector(".genre").textContent = anEvent.acf.genre;
-
-        //clone.querySelector("img").setAttribute("src", "anEvent.acf.image.sizes.medium")
-        //clone.querySelector("img").setAttribute("src", [0].acf.image.sizes.medium.source_url)
-
         if (anEvent._embedded["wp:featuredmedia"]) { //img is there
             clone.querySelector("img").setAttribute("src", anEvent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
         } else { // no img
             clone.querySelector("img").remove()
         }
-
+clone.querySelector("a.readmore").href="subpage.html?id=" + anEvent.id;
 
         other.appendChild(clone);
     }
