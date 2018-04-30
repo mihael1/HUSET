@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>HUSET</title>
@@ -10,6 +10,17 @@
 </head>
 
 <body>
+    <header class="appbar">
+        <h1 class="title"><a href="index.html"> Huset </a> </h1>
+        <svg class="menuIcon" class="s1" viewBox="0 0 100 100">
+      <rect class="myrect" x="10" y="10" width="80" height="10" rx="5" ry="5"/>
+      <rect class="myrect" x="10" y="30" width="80" height="10" rx="5" ry="5"/>
+      <rect class="myrect" x="10" y="50" width="80" height="10" rx="5" ry="5"/>
+    </svg>
+
+
+    </header>
+
     <aside class="menu hidden">
         <ul>
 
@@ -17,12 +28,16 @@
     </aside>
     <div class="container-fluid">
         <section id="singleCar">
-            <header>
-                <h2>HUSET</h2>
+            <h2 id="subpageHeader">HUSET</h2>
 
-            </header>
+
             <img src="" alt="">
             <div class="textBG">
+                <div class="datetimeprice">
+                    <h4 class="time"> Time</h4>
+                    <h4 class="date"> Date</h4>
+                    <h4 class="price"> kr. <span> Price </span></h4>
+                </div>
                 <p class="desc"> </p>
             </div>
         </section>
@@ -30,5 +45,7 @@
     </div>
 
     <script src="JS/subpage.js"></script>
+    <script src="JS/menu.js"></script>
 </body>
+
 </html>

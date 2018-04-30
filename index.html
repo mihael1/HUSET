@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <h2> Huset</h2>
+
+    <header class="appbar">
+        <h1 class="title"><a href="index.html"> Huset </a> </h1>
+    <svg class="menuIcon"  viewBox="0 0 100 100">
+      <rect class="myrect" x="10" y="10" width="80" height="10" rx="5" ry="5"/>
+      <rect class="myrect" x="10" y="30" width="80" height="10" rx="5" ry="5"/>
+      <rect class="myrect" x="10" y="50" width="80" height="10" rx="5" ry="5"/>
+    </svg>
+
+
+  </header>
+
+  <aside class="menu hidden">
+    <ul>
+
+    </ul>
+  </aside>
+
+
+
+
+
+
     <section id="other">
         <template id="otherTemp">
         <article class="otherStuff">
@@ -27,15 +54,16 @@
                  <span>kl. </span>
                   Time
               </h4>
-              </div>
-               <h3 class="price">
+
+                <h3 class="price">
                 kr. <span> Price</span>
             </h3>
 
             <p> <a class="readmore" href="">
-              Read more about event
+              Read more
                </a>
             </p>
+                </div>
 </div>
         </article>
 </template>
@@ -44,6 +72,7 @@
 
     </section>
     <script src="JS/main.js"></script>
+    <script src="JS/menu.js"></script>
 </body>
 
 </html>

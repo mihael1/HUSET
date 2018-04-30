@@ -7,8 +7,13 @@
     function fetchOther() {
         lookingForData = true;
 
+        let urlParams = new URLSearchParams(window.location.search);
 
-        fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2&page=" + page)
+        let catid = urlParams.get("category");
+        let parentid = urlParams.get("parent");
+        console.log(parentid);
+
+        fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2&page=" + page + "&categories=" + catid)
             .then(e => e.json())
             .then(showOther)
     }
@@ -27,7 +32,11 @@
 
         clone.querySelector("h1").textContent = anEvent.title.rendered;
         clone.querySelector(".price span").textContent = anEvent.acf.price;
-        clone.querySelector(".date").textContent = anEvent.acf.date;
+        var year = anEvent.acf.date.substring(2, 4);
+        var month = anEvent.acf.date.substring(4, 6);
+        var day = anEvent.acf.date.substring(6, 8);
+
+        clone.querySelector(".date").textContent = day + "/" + month + "/" + year;
         clone.querySelector(".time").textContent = anEvent.acf.time;
         //clone.querySelector(".description").innerHTML = anEvent.acf.description;
         clone.querySelector(".genre").textContent = anEvent.acf.genre;
@@ -36,7 +45,7 @@
         } else { // no img
             clone.querySelector("img").remove()
         }
-clone.querySelector("a.readmore").href="subpage.html?id=" + anEvent.id;
+        clone.querySelector("a.readmore").href = "subpage.html?id=" + anEvent.id;
 
         other.appendChild(clone);
     }
