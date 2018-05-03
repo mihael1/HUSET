@@ -10,10 +10,13 @@
         let urlParams = new URLSearchParams(window.location.search);
 
         let catid = urlParams.get("category");
-        let parentid = urlParams.get("parent");
-        console.log(parentid);
+    //    let parentid = urlParams.get("parent");
+        if(!catid){
+            catid=8;
+        }
+       console.log(catid);
 
-        fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2&page=" + page + "&categories=" + catid)
+        fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2"+ "&categories=" + catid + "&page=" + page)
             .then(e => e.json())
             .then(showOther)
     }
