@@ -12,32 +12,35 @@
     </style>
 </head>
 
-<body>
-
-    <header class="appbar">
-        <h1 class="title"><a href="index.html"> Huset </a> </h1>
-    <svg class="menuIcon"  viewBox="0 0 100 100">
+<body onload="myFunction()" style="margin:0;">
+    <div>
+        <img id="donut_svg" src="CSS/Comp%202.gif">
+    </div>
+    <div style="display:none" id="myDiv">
+        <header class="appbar">
+            <h1 class="title"><a href="index.html"> Huset </a> </h1>
+            <svg class="menuIcon" viewBox="0 0 100 100">
       <rect class="myrect" x="10" y="10" width="80" height="10" rx="5" ry="5"/>
       <rect class="myrect" x="10" y="30" width="80" height="10" rx="5" ry="5"/>
       <rect class="myrect" x="10" y="50" width="80" height="10" rx="5" ry="5"/>
     </svg>
 
 
-  </header>
+        </header>
 
-  <aside class="menu hidden">
-    <ul>
+        <aside class="menu hidden">
+            <ul>
 
-    </ul>
-  </aside>
-
-
+            </ul>
+        </aside>
 
 
 
 
-    <section id="other">
-        <template id="otherTemp">
+
+
+        <section id="other">
+            <template id="otherTemp">
         <article class="otherStuff">
 
            <h5 class="genre">
@@ -70,7 +73,8 @@
 
 
 
-    </section>
+        </section>
+    </div>
     <script src="JS/main.js"></script>
     <script src="JS/menu.js"></script>
 </body>
